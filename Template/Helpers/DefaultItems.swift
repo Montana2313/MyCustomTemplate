@@ -15,6 +15,7 @@ class DefaultItems {
         let textfield = UITextField()
         textfield.attributedPlaceholder = NSAttributedString(string: withPlaceHolder, attributes: [NSAttributedString.Key.foregroundColor : andHolderColor])
         textfield.textColor = .black
+        textfield.textAlignment = .center
         textfield.backgroundColor = .white
         return textfield
     }
@@ -32,8 +33,18 @@ class DefaultItems {
     }
     func defView(withColor : UIColor)->UIView{
         let view = UIView()
+        view.layer.borderWidth = 1.0
+        view.layer.borderColor = UIColor.white.cgColor
         view.backgroundColor = withColor
         return view
     }
-    
+    func defTableView(with registeredClass:AnyClass?)->UITableView{
+        let tableView = UITableView()
+        tableView.separatorStyle = .none
+        if registeredClass != nil{
+            tableView.register(registeredClass, forCellReuseIdentifier: "cell")
+        }
+        tableView.backgroundColor = .clear
+        return tableView
+    }
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		04DE04402340C34200708D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE043F2340C34200708D66 /* AppDelegate.swift */; };
-		04DE04422340C34200708D66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE04412340C34200708D66 /* SceneDelegate.swift */; };
 		04DE04442340C34200708D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE04432340C34200708D66 /* ViewController.swift */; };
 		04DE04492340C34400708D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DE04482340C34400708D66 /* Assets.xcassets */; };
 		04DE044C2340C34400708D66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DE044A2340C34400708D66 /* LaunchScreen.storyboard */; };
@@ -17,12 +16,14 @@
 		04DE045C2340C77E00708D66 /* SetAndGetFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE045B2340C77E00708D66 /* SetAndGetFiles.swift */; };
 		04DE045E2340D1E200708D66 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE045D2340D1E200708D66 /* Reachability.swift */; };
 		04DE04602340D23100708D66 /* DefaultItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE045F2340D23100708D66 /* DefaultItems.swift */; };
+		04E1A6182341DBB400C4B67A /* CustomizeItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1A6172341DBB400C4B67A /* CustomizeItems.swift */; };
+		04E1A61A2341DCFC00C4B67A /* exCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1A6192341DCFC00C4B67A /* exCell.swift */; };
+		04E1A61D2341DEA000C4B67A /* exView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1A61C2341DEA000C4B67A /* exView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04DE043C2340C34200708D66 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DE043F2340C34200708D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04DE04412340C34200708D66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		04DE04432340C34200708D66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04DE04482340C34400708D66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04DE044B2340C34400708D66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +33,9 @@
 		04DE045B2340C77E00708D66 /* SetAndGetFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetAndGetFiles.swift; sourceTree = "<group>"; };
 		04DE045D2340D1E200708D66 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		04DE045F2340D23100708D66 /* DefaultItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultItems.swift; sourceTree = "<group>"; };
+		04E1A6172341DBB400C4B67A /* CustomizeItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeItems.swift; sourceTree = "<group>"; };
+		04E1A6192341DCFC00C4B67A /* exCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exCell.swift; sourceTree = "<group>"; };
+		04E1A61C2341DEA000C4B67A /* exView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +68,12 @@
 		04DE043E2340C34200708D66 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				04E1A61B2341DE7500C4B67A /* CustomViews */,
 				04DE04562340C41900708D66 /* Helpers */,
 				04DE04552340C41500708D66 /* Cells */,
 				04DE04542340C40B00708D66 /* Models */,
 				04DE04532340C40400708D66 /* Controllers */,
 				04DE043F2340C34200708D66 /* AppDelegate.swift */,
-				04DE04412340C34200708D66 /* SceneDelegate.swift */,
 				04DE04482340C34400708D66 /* Assets.xcassets */,
 				04DE044A2340C34400708D66 /* LaunchScreen.storyboard */,
 				04DE044D2340C34400708D66 /* Info.plist */,
@@ -95,6 +99,9 @@
 		04DE04552340C41500708D66 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				04DE045B2340C77E00708D66 /* SetAndGetFiles.swift */,
+				04DE04592340C6A100708D66 /* User.swift */,
+				04E1A6192341DCFC00C4B67A /* exCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -103,12 +110,19 @@
 			isa = PBXGroup;
 			children = (
 				04DE04572340C44C00708D66 /* Generals.swift */,
-				04DE04592340C6A100708D66 /* User.swift */,
-				04DE045B2340C77E00708D66 /* SetAndGetFiles.swift */,
 				04DE045D2340D1E200708D66 /* Reachability.swift */,
 				04DE045F2340D23100708D66 /* DefaultItems.swift */,
+				04E1A6172341DBB400C4B67A /* CustomizeItems.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		04E1A61B2341DE7500C4B67A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				04E1A61C2341DEA000C4B67A /* exView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,14 +195,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E1A61A2341DCFC00C4B67A /* exCell.swift in Sources */,
 				04DE045E2340D1E200708D66 /* Reachability.swift in Sources */,
 				04DE04442340C34200708D66 /* ViewController.swift in Sources */,
 				04DE04402340C34200708D66 /* AppDelegate.swift in Sources */,
 				04DE04582340C44C00708D66 /* Generals.swift in Sources */,
+				04E1A6182341DBB400C4B67A /* CustomizeItems.swift in Sources */,
 				04DE04602340D23100708D66 /* DefaultItems.swift in Sources */,
+				04E1A61D2341DEA000C4B67A /* exView.swift in Sources */,
 				04DE045C2340C77E00708D66 /* SetAndGetFiles.swift in Sources */,
 				04DE045A2340C6A100708D66 /* User.swift in Sources */,
-				04DE04422340C34200708D66 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
