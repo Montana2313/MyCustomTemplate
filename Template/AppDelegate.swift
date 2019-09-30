@@ -11,27 +11,81 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        let viewcontrollerFirst = ViewController()
+        // EĞER USER kontrolü var ise
+//           if getUserName() == ""{
+//               viewcontrollerFirst = FirstScreen()
+//           }else {
+//               print("USERID VAR")
+//               print(getUserName())
+//              viewcontrollerFirst = Anasayfa()
+//           }
+           
+           let nav1 = UINavigationController()
+           nav1.viewControllers = [viewcontrollerFirst]
+           nav1.navigationBar.isHidden = true
+           window!.rootViewController = nav1
+           window?.makeKeyAndVisible()
         return true
     }
 
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
+
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
 
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+        
     }
-
+    func deviceModel() -> PhoneType{
+          let bounds = UIScreen.main.bounds
+          let screenWidth = bounds.width
+          let screenHeight = bounds.height
+          if screenWidth == 414.0 && screenHeight == 896.0{
+              return PhoneType.iPhoneXR
+          }else if screenWidth == 375.0 && screenHeight == 812.0{
+              return PhoneType.iPhoneX
+          }else if screenWidth == 414.0 && screenHeight == 896.0 {
+              return PhoneType.iPhoneXSMax
+          }else if screenWidth == 414.0 && screenHeight == 736.0{
+              return PhoneType.iPhone8Plus
+          }else if screenWidth == 375.0 && screenHeight == 667.0{
+              return PhoneType.iPhone8
+          }else if screenWidth == 320.0 && screenHeight == 568.0{
+              return PhoneType.iPhoneSE
+          }else {
+              return PhoneType.Hata
+          }
+      }
+    func open_Page(withPage pagetype:PageType,withParam:String?){
+        // yönlendirme işlemleri bura üzerinden yapılacak
+        if pagetype == PageType.FirstScreen{
+//            let rootView:FirstScreen = FirstScreen()
+//            self.seguePage(withController: rootView)
+        }
+    }
+    private func seguePage(withController : UIViewController){
+            if let window = self.window{
+                UIView.transition(with: window, duration: 0.70, options: .transitionFlipFromTop, animations: {
+    //                if withController.isKind(of: Anasayfa.classForCoder()) || withController.isKind(of: PlusVC.classForCoder()){
+                        // HEPSİNDE GEREKLi değilse Comment out yapılır
+                        let nav1 = UINavigationController()
+                        nav1.viewControllers = [withController]
+                        nav1.navigationBar.isHidden = true
+                        self.window!.rootViewController = nav1
+                        self.window?.makeKeyAndVisible()
+    //                }else {
+    //                    window.rootViewController = withController
+    //                }
+                }, completion: nil)
+            }
+        }
 
 }
 
