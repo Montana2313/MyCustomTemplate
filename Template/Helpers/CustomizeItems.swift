@@ -31,4 +31,58 @@ class CustomizeItems {
         imageView.layer.masksToBounds = true
         imageView.clipsToBounds = true
     }
+    func customAppBarButtons(with leftButton:UIButton,andRigth:UIButton,currentView:UIView){
+          leftButton.frame = CGRect(x: 20, y: 40, width: 45, height: 40)
+          andRigth.frame = CGRect(x: screenWith - 80, y: 40, width: 45, height: 40)
+          currentView.addSubview(leftButton)
+          currentView.addSubview(andRigth)
+    }
+    func customTabbarSelector(countOfItems:Int,andCurrentView:UIView,andSelectorColor : UIColor) {
+        if countOfItems == 2 {
+            let value = andCurrentView.frame.size.width / 2
+            let selector = DefaultItems.referance.defView(withColor: andSelectorColor)
+            selector.frame = CGRect(x: value - 20, y:0, width: 20, height: andCurrentView.frame.size.height)
+            andCurrentView.addSubview(selector)
+        }else if countOfItems == 3 {
+            let value = andCurrentView.frame.size.width / 3
+            let selector = DefaultItems.referance.defView(withColor: andSelectorColor)
+            selector.frame = CGRect(x: value - 10, y:0, width: 20, height: andCurrentView.frame.size.height)
+            andCurrentView.addSubview(selector)
+            let selector2 = DefaultItems.referance.defView(withColor: andSelectorColor)
+            selector2.frame = CGRect(x:value + value - 10, y:0, width: 20, height: andCurrentView.frame.size.height)
+            andCurrentView.addSubview(selector2)
+        }else if countOfItems == 4 {
+            let value = andCurrentView.frame.size.width / 4
+            let selector = DefaultItems.referance.defView(withColor: andSelectorColor)
+            selector.frame = CGRect(x: value - 10, y:0, width: 20, height: andCurrentView.frame.size.height)
+            andCurrentView.addSubview(selector)
+            let selector2 = DefaultItems.referance.defView(withColor: andSelectorColor)
+            selector2.frame = CGRect(x:value + value - 10, y:0, width: 20, height: andCurrentView.frame.size.height)
+            andCurrentView.addSubview(selector2)
+            let selector3 = DefaultItems.referance.defView(withColor: andSelectorColor)
+            selector3.frame = CGRect(x:value + value + value - 10, y:0, width: 20, height: andCurrentView.frame.size.height)
+            andCurrentView.addSubview(selector3)
+        }
+    }
+    func customTabbarButton(totalItemsCount:Int,itemNumber:Int,buttonItem:UIButton,currentView:UIView) {
+        if totalItemsCount == 2 {
+            let value = currentView.frame.size.width / 2
+            if itemNumber == 1 {
+                buttonItem.frame = CGRect(x:15, y: 10, width:value - 50, height: 60)
+            }else if itemNumber == 2 {
+                buttonItem.frame = CGRect(x: value + 10, y: 10, width:screenWith - value - 20, height: 60)
+            }
+        }else if totalItemsCount == 3 {
+            let value = currentView.frame.size.width / 3
+            if itemNumber == 1 {
+                    buttonItem.frame = CGRect(x:15, y: 10, width:value - 40, height: 60)
+            }else if itemNumber == 2 {
+                    buttonItem.frame = CGRect(x: value + 20, y: 10, width:screenWith - (value + value) - 40, height: 60)
+            }else if itemNumber == 3 {
+                    buttonItem.frame = CGRect(x: value + value + 20, y: 10, width: screenWith - value - value - 40, height: 60)
+            }
+            
+        }
+        currentView.addSubview(buttonItem)
+    }
 }

@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     private var denemeTextField = UITextField()
     private var denemeView = UIView()
     private var denemeTableView = UITableView()
+    private var denemeAppBar = UIView()
+    private var denemetabbar = UIView()
+    private var denemeLeftMenu = UIButton()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = masterColor
@@ -41,9 +44,36 @@ extension ViewController : SetUpViews{
         denemeTableView = {
             let tableView = DefaultItems.referance.defTableView(with: exCell.self)
             tableView.delegate = self
+            tableView.isHidden = true
             tableView.dataSource = self
             return tableView
         }()
+        denemeAppBar = {
+            let appBar = DefaultItems.referance.defAppBar(withColor: .red, andText: "Deneme", labelcolor: .white)
+            let buttonLeft = DefaultItems.referance.defButton(withText: "Left", andButtonColor: .white)
+            let buttonRight = DefaultItems.referance.defButton(withText: "Right", andButtonColor: .white)
+            appBar.isHidden = true
+            CustomizeItems.referance.customAppBarButtons(with: buttonLeft, andRigth: buttonRight, currentView: appBar)
+            return appBar
+        }()
+        denemetabbar = {
+            let tabbar = DefaultItems.referance.defTabbar(withColor: .black)
+            CustomizeItems.referance.customTabbarSelector(countOfItems: 3, andCurrentView: tabbar, andSelectorColor: .white)
+            let button = DefaultItems.referance.defButton(withText: "deneme", andButtonColor: .red)
+            let button2 = DefaultItems.referance.defButton(withText: "deneme", andButtonColor: .red)
+            let button3 = DefaultItems.referance.defButton(withText: "deneme", andButtonColor: .red)
+            CustomizeItems.referance.customTabbarButton(totalItemsCount: 3, itemNumber: 1, buttonItem: button, currentView: tabbar)
+            CustomizeItems.referance.customTabbarButton(totalItemsCount: 3, itemNumber: 2, buttonItem: button2, currentView: tabbar)
+            CustomizeItems.referance.customTabbarButton(totalItemsCount: 3, itemNumber: 3, buttonItem: button3, currentView: tabbar)
+            return tabbar
+        }()
+        denemeLeftMenu = {
+            let button = DefaultItems.referance.defLeftButtonMenu(withimageNamed: "", orColor: .red, andText: "Left")
+            return button
+        }()
+        self.view.addSubview(denemeLeftMenu)
+        self.view.addSubview(denemetabbar)
+        self.view.addSubview(denemeAppBar)
         self.denemeView.addSubview(denemeTextField)
         self.denemeView.addSubview(denemeButton)
         self.view.addSubview(denemeView)

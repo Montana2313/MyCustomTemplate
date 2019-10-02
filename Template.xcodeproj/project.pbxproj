@@ -92,6 +92,8 @@
 		04DE04542340C40B00708D66 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04DE045B2340C77E00708D66 /* SetAndGetFiles.swift */,
+				04DE04592340C6A100708D66 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -99,8 +101,6 @@
 		04DE04552340C41500708D66 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				04DE045B2340C77E00708D66 /* SetAndGetFiles.swift */,
-				04DE04592340C6A100708D66 /* User.swift */,
 				04E1A6192341DCFC00C4B67A /* exCell.swift */,
 			);
 			path = Cells;

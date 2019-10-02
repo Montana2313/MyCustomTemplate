@@ -42,6 +42,10 @@ func setUserDefaultsString(withValue:String,forKey:String){
     UserDefaults.standard.setValue(withValue, forKey: forKey)
     UserDefaults.standard.synchronize()
 }
+func removeUserDefaultString(forkey:String){
+    UserDefaults.standard.removeObject(forKey: forkey)
+    UserDefaults.standard.synchronize()
+}
 func createDefaultAlert(withTitle:String , andDesc:String , andButtonTitle:String)->UIAlertController{
     let alertController = UIAlertController(title: withTitle, message: andDesc, preferredStyle: .alert)
     let actionButton = UIAlertAction(title: andButtonTitle, style: .cancel, handler: nil)

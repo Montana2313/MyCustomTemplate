@@ -25,6 +25,11 @@ class DefaultItems {
         button.backgroundColor = andButtonColor
         return button
     }
+    func defButtonW(withImageName:String)->UIButton{
+           let button = UIButton()
+            button.setBackgroundImage(UIImage(named: withImageName), for: .normal)
+           return button
+       }
     func defLabel(withText:String,andLabelColor:UIColor) -> UILabel {
         let label = UILabel()
         label.text = withText
@@ -46,5 +51,34 @@ class DefaultItems {
         }
         tableView.backgroundColor = .clear
         return tableView
+    }
+    func defAppBar(withColor : UIColor , andText:String , labelcolor : UIColor) -> UIView {
+        let view = UIView()
+        view.backgroundColor = withColor
+        view.frame = CGRect(x: 0, y: 0, width: screenWith, height: 80)
+        let label = defLabel(withText: andText, andLabelColor: .black)
+        label.text = andText
+        label.textColor = labelcolor
+        label.textAlignment = .center
+        label.font = UIFont(name: "Helvetica", size: 20.0)
+        label.frame = CGRect(x: (screenWith / 2) - 50, y: 40 , width: 100, height: 40)
+        view.addSubview(label)
+        return view
+    }
+    func defTabbar(withColor:UIColor) -> UIView {
+        let view = UIView()
+        view.backgroundColor = withColor
+        view.frame = CGRect(x: 0, y: screenHeigth - 80, width: screenWith, height: 80)
+        return view
+    }
+    func defLeftButtonMenu(withimageNamed:String,orColor:UIColor?,andText:String)->UIButton{
+        var sentButton = UIButton()
+        if withimageNamed == "" {
+           sentButton = defButton(withText: andText, andButtonColor: orColor!)
+        }else {
+           sentButton = defButtonW(withImageName: withimageNamed)
+        }
+        sentButton.frame = CGRect(x: 20, y: 40, width: screenWith - (screenWith - 60), height: 45)
+        return sentButton
     }
 }
