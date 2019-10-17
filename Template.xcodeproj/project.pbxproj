@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0463F6EE235351EA00667F47 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463F6ED235351EA00667F47 /* DataManager.swift */; };
 		04DE04402340C34200708D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE043F2340C34200708D66 /* AppDelegate.swift */; };
 		04DE04442340C34200708D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE04432340C34200708D66 /* ViewController.swift */; };
 		04DE04492340C34400708D66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DE04482340C34400708D66 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0463F6ED235351EA00667F47 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		04DE043C2340C34200708D66 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DE043F2340C34200708D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04DE04432340C34200708D66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				04DE045B2340C77E00708D66 /* SetAndGetFiles.swift */,
 				04DE04592340C6A100708D66 /* User.swift */,
+				0463F6ED235351EA00667F47 /* DataManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				04E1A6182341DBB400C4B67A /* CustomizeItems.swift in Sources */,
 				04DE04602340D23100708D66 /* DefaultItems.swift in Sources */,
 				04E1A61D2341DEA000C4B67A /* exView.swift in Sources */,
+				0463F6EE235351EA00667F47 /* DataManager.swift in Sources */,
 				04DE045C2340C77E00708D66 /* SetAndGetFiles.swift in Sources */,
 				04DE045A2340C6A100708D66 /* User.swift in Sources */,
 			);

@@ -21,12 +21,22 @@ class ViewController: UIViewController {
         self.view.backgroundColor = masterColor
         setupViews()
         setupFrameWithPhone(withdeviceName: getDeviceModel())
+        animateFrameWith(deviceName: getDeviceModel())
+        DataManager.referance.request(withURL:"http://localhost:3000/books/search" , andRequestType: .GET) {
+            print("Done")
+        }
     }
     @objc func denemeTapped(){
         exView.referance.showAlert(with: self.view)
     }
 }
 extension ViewController : SetUpViews{
+    func animateFrameWith(deviceName: PhoneType) {
+        UIView.animate(withDuration: 1.0) {
+            self.denemeView.frame =  CGRect(x: 10, y: 100, width: screenWith - 20, height: 400)
+        }
+    }
+    
     func setupViews() {
         denemeButton = {
             let btn = DefaultItems.referance.defButton(withText: "Deeneme", andButtonColor: .blue)
@@ -80,7 +90,7 @@ extension ViewController : SetUpViews{
         self.view.addSubview(denemeTableView)
     }
     func setupFrameWithPhone(withdeviceName: PhoneType) {
-        self.denemeView.frame = CGRect(x: 10, y: 100, width: screenWith - 20, height: 400)
+        self.denemeView.frame = CGRect(x: 10, y: -500, width: screenWith - 20, height: 400)
         self.denemeButton.frame = CGRect(x: 50, y: 200, width: screenWith - 100, height: 60)
         self.denemeTextField.frame = CGRect(x: 50, y: 280, width: screenWith - 100, height: 60)
         self.denemeTableView.frame = CGRect(x: 0, y: 510, width: screenWith, height: screenHeigth - 510)

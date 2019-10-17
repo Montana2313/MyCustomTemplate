@@ -59,6 +59,7 @@ protocol CreateView {
 protocol SetUpViews {
     func setupViews()
     func setupFrameWithPhone(withdeviceName:PhoneType)
+    func animateFrameWith(deviceName:PhoneType)
 }
 protocol FirebaseProcess {
     func getFirebaseDatas() // Veriler burada çekilir.
@@ -81,4 +82,10 @@ enum PhoneType {
     case iPhone8
     case iPhoneSE
     case Hata
+}
+enum OwnRequestType {
+    case GET
+    case PUT
+    case DELETE
+    case POST
 }

@@ -65,6 +65,16 @@ class DefaultItems {
         view.addSubview(label)
         return view
     }
+    func defSearchBar(withPlaceHolder:String)->UISearchBar{
+        let searchBar = UISearchBar()
+        searchBar.searchBarStyle = UISearchBar.Style.minimal
+        searchBar.placeholder = withPlaceHolder
+        searchBar.backgroundColor = .clear
+        searchBar.sizeToFit()
+        searchBar.searchTextField.textColor = .black
+        searchBar.isTranslucent = false
+        return searchBar
+    }
     func defTabbar(withColor:UIColor) -> UIView {
         let view = UIView()
         view.backgroundColor = withColor
