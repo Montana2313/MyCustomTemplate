@@ -22,9 +22,6 @@ class ViewController: UIViewController {
         setupViews()
         setupFrameWithPhone(withdeviceName: getDeviceModel())
         animateFrameWith(deviceName: getDeviceModel())
-        DataManager.referance.request(withURL:"http://localhost:3000/books/search" , andRequestType: .GET) {
-            print("Done")
-        }
     }
     @objc func denemeTapped(){
         exView.referance.showAlert(with: self.view)

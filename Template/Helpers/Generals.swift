@@ -65,6 +65,15 @@ protocol FirebaseProcess {
     func getFirebaseDatas() // Veriler burada çekilir.
     func setDataOnFirebase() // Veriler burada aktarılır.
 }
+// Classlar
+class UserType {
+    var id:String = ""
+    var username :String = ""
+    var email:String = ""
+    var userImage:String = ""
+    var userPhoneNumber:String = ""
+}
+
 // ENUMLAR
 enum PageType {
     // Page Names
@@ -88,4 +97,8 @@ enum OwnRequestType {
     case PUT
     case DELETE
     case POST
+}
+enum LoginScreen {
+    case Login
+    case CreateUser
 }

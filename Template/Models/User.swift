@@ -92,6 +92,24 @@ class User {
 //
 //        }
     }
+    func getUserInfos(process:@escaping(UserType)->Void){
+//        let db = Firestore.firestore()
+//        db.collection("Users").document(currentUserId).getDocument { (doc, error) in
+//            if error == nil{
+//                if let data = doc?.data() {
+//                    let usertype = UserType()
+//                    usertype.email = data["email"] as? String ?? ""
+//                    usertype.username = data["username"] as? String ?? ""
+//                    usertype.userImage = data["imageURL"] as? String ?? ""
+//                    usertype.userPhoneNumber = data["phoneNumber"] as? String ?? ""
+//
+//                    process(usertype)
+//                }
+//            }else {
+//                print(error?.localizedDescription as Any)
+//            }
+//        }
+    }
     private func checkUser(username : String , mail : String , clousere : @escaping (Bool) -> Void)
     {
 //        let db = Firestore.firestore()

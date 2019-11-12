@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0453CE6B237B68A10023A2A8 /* CustomLoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453CE6A237B68A10023A2A8 /* CustomLoginScreen.swift */; };
+		0453CE6D237B6DB50023A2A8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453CE6C237B6DB50023A2A8 /* LoginVC.swift */; };
 		0463F6EE235351EA00667F47 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463F6ED235351EA00667F47 /* DataManager.swift */; };
 		04DE04402340C34200708D66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE043F2340C34200708D66 /* AppDelegate.swift */; };
 		04DE04442340C34200708D66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DE04432340C34200708D66 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0453CE6A237B68A10023A2A8 /* CustomLoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginScreen.swift; sourceTree = "<group>"; };
+		0453CE6C237B6DB50023A2A8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0463F6ED235351EA00667F47 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		04DE043C2340C34200708D66 /* Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Template.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DE043F2340C34200708D66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				04DE04432340C34200708D66 /* ViewController.swift */,
+				0453CE6C237B6DB50023A2A8 /* LoginVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 				04DE045B2340C77E00708D66 /* SetAndGetFiles.swift */,
 				04DE04592340C6A100708D66 /* User.swift */,
 				0463F6ED235351EA00667F47 /* DataManager.swift */,
+				0453CE6A237B68A10023A2A8 /* CustomLoginScreen.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,12 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0453CE6D237B6DB50023A2A8 /* LoginVC.swift in Sources */,
 				04E1A61A2341DCFC00C4B67A /* exCell.swift in Sources */,
 				04DE045E2340D1E200708D66 /* Reachability.swift in Sources */,
 				04DE04442340C34200708D66 /* ViewController.swift in Sources */,
 				04DE04402340C34200708D66 /* AppDelegate.swift in Sources */,
 				04DE04582340C44C00708D66 /* Generals.swift in Sources */,
 				04E1A6182341DBB400C4B67A /* CustomizeItems.swift in Sources */,
+				0453CE6B237B68A10023A2A8 /* CustomLoginScreen.swift in Sources */,
 				04DE04602340D23100708D66 /* DefaultItems.swift in Sources */,
 				04E1A61D2341DEA000C4B67A /* exView.swift in Sources */,
 				0463F6EE235351EA00667F47 /* DataManager.swift in Sources */,
