@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042687E2237E1AE800A73234 /* CustomMenus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042687E1237E1AE800A73234 /* CustomMenus.swift */; };
+		04396532238F1C7100D37A5C /* CustomAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04396531238F1C7100D37A5C /* CustomAlerts.swift */; };
 		0453CE6B237B68A10023A2A8 /* CustomLoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453CE6A237B68A10023A2A8 /* CustomLoginScreen.swift */; };
 		0453CE6D237B6DB50023A2A8 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0453CE6C237B6DB50023A2A8 /* LoginVC.swift */; };
 		0463F6EE235351EA00667F47 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0463F6ED235351EA00667F47 /* DataManager.swift */; };
@@ -22,9 +24,12 @@
 		04E1A6182341DBB400C4B67A /* CustomizeItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1A6172341DBB400C4B67A /* CustomizeItems.swift */; };
 		04E1A61A2341DCFC00C4B67A /* exCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1A6192341DCFC00C4B67A /* exCell.swift */; };
 		04E1A61D2341DEA000C4B67A /* exView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1A61C2341DEA000C4B67A /* exView.swift */; };
+		04E55A6123A835790036D1A6 /* Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E55A6023A835790036D1A6 /* Frames.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		042687E1237E1AE800A73234 /* CustomMenus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenus.swift; sourceTree = "<group>"; };
+		04396531238F1C7100D37A5C /* CustomAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlerts.swift; sourceTree = "<group>"; };
 		0453CE6A237B68A10023A2A8 /* CustomLoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoginScreen.swift; sourceTree = "<group>"; };
 		0453CE6C237B6DB50023A2A8 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0463F6ED235351EA00667F47 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
@@ -42,6 +47,7 @@
 		04E1A6172341DBB400C4B67A /* CustomizeItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizeItems.swift; sourceTree = "<group>"; };
 		04E1A6192341DCFC00C4B67A /* exCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exCell.swift; sourceTree = "<group>"; };
 		04E1A61C2341DEA000C4B67A /* exView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = exView.swift; sourceTree = "<group>"; };
+		04E55A6023A835790036D1A6 /* Frames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Frames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,7 @@
 			children = (
 				04DE04432340C34200708D66 /* ViewController.swift */,
 				0453CE6C237B6DB50023A2A8 /* LoginVC.swift */,
+				042687E1237E1AE800A73234 /* CustomMenus.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -122,6 +129,8 @@
 				04DE045D2340D1E200708D66 /* Reachability.swift */,
 				04DE045F2340D23100708D66 /* DefaultItems.swift */,
 				04E1A6172341DBB400C4B67A /* CustomizeItems.swift */,
+				04396531238F1C7100D37A5C /* CustomAlerts.swift */,
+				04E55A6023A835790036D1A6 /* Frames.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -207,12 +216,15 @@
 				0453CE6D237B6DB50023A2A8 /* LoginVC.swift in Sources */,
 				04E1A61A2341DCFC00C4B67A /* exCell.swift in Sources */,
 				04DE045E2340D1E200708D66 /* Reachability.swift in Sources */,
+				04396532238F1C7100D37A5C /* CustomAlerts.swift in Sources */,
 				04DE04442340C34200708D66 /* ViewController.swift in Sources */,
+				04E55A6123A835790036D1A6 /* Frames.swift in Sources */,
 				04DE04402340C34200708D66 /* AppDelegate.swift in Sources */,
 				04DE04582340C44C00708D66 /* Generals.swift in Sources */,
 				04E1A6182341DBB400C4B67A /* CustomizeItems.swift in Sources */,
 				0453CE6B237B68A10023A2A8 /* CustomLoginScreen.swift in Sources */,
 				04DE04602340D23100708D66 /* DefaultItems.swift in Sources */,
+				042687E2237E1AE800A73234 /* CustomMenus.swift in Sources */,
 				04E1A61D2341DEA000C4B67A /* exView.swift in Sources */,
 				0463F6EE235351EA00667F47 /* DataManager.swift in Sources */,
 				04DE045C2340C77E00708D66 /* SetAndGetFiles.swift in Sources */,

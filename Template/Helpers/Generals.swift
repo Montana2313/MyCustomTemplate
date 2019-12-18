@@ -46,12 +46,6 @@ func removeUserDefaultString(forkey:String){
     UserDefaults.standard.removeObject(forKey: forkey)
     UserDefaults.standard.synchronize()
 }
-func createDefaultAlert(withTitle:String , andDesc:String , andButtonTitle:String)->UIAlertController{
-    let alertController = UIAlertController(title: withTitle, message: andDesc, preferredStyle: .alert)
-    let actionButton = UIAlertAction(title: andButtonTitle, style: .cancel, handler: nil)
-    alertController.addAction(actionButton)
-    return alertController
-}
 //PROTOKOLLER
 protocol CreateView {
     func MasterPage()
@@ -101,4 +95,10 @@ enum OwnRequestType {
 enum LoginScreen {
     case Login
     case CreateUser
+}
+enum Side {
+    case Left
+    case Top
+    case Bottom
+    case Right
 }

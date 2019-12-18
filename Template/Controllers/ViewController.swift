@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController {
     private var denemeButton = UIButton()
@@ -19,12 +20,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = masterColor
+        let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: [.alert,.sound,.badge]) { (success, error) in
+                if error != nil {
+                    print("Hata var ")
+                }
+            }
+        let notifContent = UNMutableNotificationContent()
+        notifContent.title = "FeedMe"
+        notifContent.body = "Koyduğun yemekleri çekerek puan kazan ve puanlarla bağış yap!"
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        let idString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: idString, content: notifContent, trigger: trigger)
+        
+        center.add(request) { (err) in
+            if err != nil{
+                print(err?.localizedDescription)
+            }
+        }
+        
+        
+        
+        
         setupViews()
         setupFrameWithPhone(withdeviceName: getDeviceModel())
         animateFrameWith(deviceName: getDeviceModel())
     }
     @objc func denemeTapped(){
-        exView.referance.showAlert(with: self.view)
+       exView.referance.showAlert(with: self.view)
     }
 }
 extension ViewController : SetUpViews{
