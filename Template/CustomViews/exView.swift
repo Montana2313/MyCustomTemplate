@@ -10,7 +10,11 @@ import Foundation
 import UIKit
 
 class exView: UIView {
-    static let referance = exView()
+    private static var referance : exView? = exView()
+    static var ref: exView {
+           if referance == nil { referance  = exView() }
+           return referance!
+       }
     var currentView = UIView() // arka planı karartma işlemi
     var parentView = UIView() // alertin ana ekranı eklemeler buraya yapılır
     override init(frame: CGRect) {
@@ -37,5 +41,6 @@ class exView: UIView {
            UIView.animate(withDuration: 1.0) {
                self.parentView.frame = CGRect(x: -100, y:-100, width:screenWith - 40, height: 400)
            }
+            exView.referance = nil
        }
 }
