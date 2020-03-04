@@ -19,6 +19,13 @@ class DefaultItems {
         textfield.backgroundColor = .white
         return textfield
     }
+    func defTextView(withText:String , andHolderColor:UIColor) -> UITextView {
+        let textView = UITextView()
+        textView.attributedText = NSAttributedString(string: withText, attributes: [NSAttributedString.Key.foregroundColor : andHolderColor])
+        textView.textAlignment = .center
+        textView.backgroundColor = .white
+        return textView
+    }
     func defButton(withText:String,andButtonColor:UIColor)->UIButton{
         let button = UIButton()
         button.setTitle(withText, for: .normal)

@@ -60,11 +60,14 @@ protocol FirebaseProcess {
     func setDataOnFirebase() // Veriler burada aktarılır.
 }
 // Classlar
-class UserType {
+class UserData {
     var id:String = ""
     var username :String = ""
     var email:String = ""
     var userImage:String = ""
+    func toString()->String{
+        return self.id + " " + self.username + " " + self.email
+    }
     init(){
         // do nothing
     }
@@ -94,8 +97,9 @@ class UserType {
             }
         }
     }
-    func getUser()->UserType{
-        let user = UserType()
+    
+    func getUser()->UserData{
+        let user = UserData()
         user.email = UserDefaults.standard.string(forKey: "email") ?? ""
         user.username = UserDefaults.standard.string(forKey: "username") ?? ""
         user.id = UserDefaults.standard.string(forKey: "id") ?? ""

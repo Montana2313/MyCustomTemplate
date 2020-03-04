@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 
 class ViewController: UIViewController {
-    private var denemeButton = UIButton()
+    lazy var denemeButton = UIButton()
     private var denemeTextField = UITextField()
     private var denemeView = UIView()
     private var denemeTableView = UITableView()
@@ -35,19 +35,17 @@ class ViewController: UIViewController {
         
         center.add(request) { (err) in
             if err != nil{
-                print(err?.localizedDescription)
+                print(err?.localizedDescription as Any)
             }
         }
-        
-        
-        
         
         setupViews()
         setupFrameWithPhone(withdeviceName: getDeviceModel())
         animateFrameWith(deviceName: getDeviceModel())
+        print(UserType())
     }
     @objc func denemeTapped(){
-       exView.referance.showAlert(with: self.view)
+        exView.ref.showAlert(with: self.view)
     }
 }
 extension ViewController : SetUpViews{

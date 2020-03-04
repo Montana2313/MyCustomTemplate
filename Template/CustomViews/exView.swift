@@ -12,9 +12,10 @@ import UIKit
 class exView: UIView {
     private static var referance : exView? = exView()
     static var ref: exView {
+        // aslında buarad bir deinit işlmei var
            if referance == nil { referance  = exView() }
            return referance!
-       }
+    }
     var currentView = UIView() // arka planı karartma işlemi
     var parentView = UIView() // alertin ana ekranı eklemeler buraya yapılır
     override init(frame: CGRect) {
